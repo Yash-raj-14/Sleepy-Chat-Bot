@@ -3,7 +3,7 @@ import pymysql as ms
 
 def speak(text):
     try:
-        engine = pyttsx3.init()   # हर बार नया engine
+        engine = pyttsx3.init()   # new engine everytime
         engine.setProperty('rate', 150)
         voices = engine.getProperty('voices')
         engine.setProperty('voice', voices[1].id)  # female voice
@@ -17,9 +17,9 @@ def speak(text):
 def main():
     conn = ms.connect(
         host="localhost",
-        user="root",
-        password="Yashraj@6350",
-        database="chatbot"
+        user="",
+        password="",
+        database=""
     )
     cursor = conn.cursor()
 
